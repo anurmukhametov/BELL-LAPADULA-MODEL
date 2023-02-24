@@ -5,8 +5,7 @@ namespace BELL_LAPADULA_MODEL
     enum Operation
     {
         Read,
-        Write,
-        Change
+        Write
     }
 
     internal enum PrivacyLevel : ushort
@@ -154,7 +153,7 @@ namespace BELL_LAPADULA_MODEL
                     subjectId = FindSubjectByName(input);
                     if (subjectId != -1)
                     {
-                        Console.WriteLine("Identification was successful.\n");
+                        Console.WriteLine("Identification was successful\n");
                     }
                     else
                     {
@@ -203,11 +202,11 @@ namespace BELL_LAPADULA_MODEL
         {
             if (AccessVerification(subjectPrivacyLevel, objectPrivacyLevel, Operation.Read))
             {
-                Console.WriteLine($"{Data.Objects[objectPrivacyLevel.ObjectId]} successfully read.\n");
+                Console.WriteLine($"{Data.Objects[objectPrivacyLevel.ObjectId]} successfully read\n");
             }
             else
             {
-                Console.WriteLine("Read denied.\n");
+                Console.WriteLine("Read denied\n");
             }
         }
 
@@ -215,11 +214,11 @@ namespace BELL_LAPADULA_MODEL
         {
             if (AccessVerification(subjectPrivacyLevel, objectPrivacyLevel, Operation.Write))
             {
-                Console.WriteLine($"{Data.Objects[objectPrivacyLevel.ObjectId]} successfully write.\n");
+                Console.WriteLine($"{Data.Objects[objectPrivacyLevel.ObjectId]} successfully write\n");
             }
             else
             {
-                Console.WriteLine("Write denied.\n");
+                Console.WriteLine("Write denied\n");
             }
         }
 
@@ -249,7 +248,7 @@ namespace BELL_LAPADULA_MODEL
             }
             else
             {
-                Console.WriteLine("It is forbidden to increase the level of privacy.\n");
+                Console.WriteLine("It is forbidden to increase the level of privacy\n");
             }
         }
     }
@@ -288,7 +287,7 @@ namespace BELL_LAPADULA_MODEL
                                 Console.WriteLine();
                                 break;
                             default:
-                                Console.WriteLine("Unknown command.\n");
+                                Console.WriteLine("Unknown command\n");
                                 break;
                         }
                     }
